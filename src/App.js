@@ -1,9 +1,11 @@
 import Greeting from './components/Greeting';
 
-export default function App() {
+function App() {
   return (
     <div className="App">
       <Greeting />
     </div>
   );
 }
+
+export default App;

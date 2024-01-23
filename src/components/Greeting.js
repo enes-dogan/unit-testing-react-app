@@ -1,19 +1,21 @@
 import { useState } from 'react';
+import Output from './Output';
 
-export default function Greeting() {
+const Greeting = () => {
   const [changedText, setChangedText] = useState(false);
 
-  function changeTextHandler() {
-    setChangedText(!changedText);
-  }
+  const changeTextHandler = () => {
+    setChangedText(true);
+  };
 
   return (
-    <>
-      <h2>Greetings!</h2>
-      {!changedText && <p>Not changed.</p>}
+    <div>
+      <h2>Hello World!</h2>
+      {!changedText && <Output>It's good to see you!</Output>}
       {changedText && <p>Changed!</p>}
-      {/* <p>{changedText ? 'Not changed.' : 'Changed!'}</p> */}
       <button onClick={changeTextHandler}>Change Text!</button>
-    </>
+    </div>
   );
-}
+};
+
+export default Greeting;
